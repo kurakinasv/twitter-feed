@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twitter feed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!--+ Navigation -->
+
+        <div class="nav">
+
+            <div class="logo">
+                <i class="fab fa-twitter"></i>
+            </div>
+
+            <div class="menu">
+
+                <a class="menu__item" href="#">
+                    <span class="menu__item__block">
+                        <i class="fab fa-twitter"></i>
+                        <span class="menu__item__text">Home</span>
+                    </span>
+
+                </a>
+
+                <a class="menu__item" href="#">
+                    <span class="menu__item__block">
+                        <i class="fab fa-twitter"></i>
+                        <span class="menu__item__text">Explore</span>
+                    </span>
+                </a>
+
+                <a class="menu__item" href="#">
+                    <span class="menu__item__block">
+                        <i class="fab fa-twitter"></i>
+                        <span class="menu__item__text">Notifications</span>
+                    </span>
+                </a>
+
+                <a class="menu__item" href="#">
+                    <span class="menu__item__block">
+                        <i class="fab fa-twitter"></i>
+                        <span class="menu__item__text">Messages</span>
+                    </span>
+                </a>
+
+                <a class="menu__item" href="#">
+                    <span class="menu__item__block">
+                        <i class="fab fa-twitter"></i>
+                        <span class="menu__item__text">Bookmarks</span>
+                    </span>
+
+                </a>
+
+                <a class="menu__item" href="#">
+                    <span class="menu__item__block">
+                        <i class="fab fa-twitter"></i>
+                        <span class="menu__item__text">Lists</span>
+                    </span>
+                </a>
+
+                <a class="menu__item" href="#">
+                    <span class="menu__item__block">
+                        <i class="fab fa-twitter"></i>
+                        <span class="menu__item__text">Profile</span>
+                    </span>
+                </a>
+
+                <a class="menu__item" href="#">
+                    <span class="menu__item__block">
+                        <i class="fab fa-twitter"></i>
+                        <span class="menu__item__text">More</span>
+                    </span>
+                </a>
+
+            </div>
+
+            <button class="nav__tweet">Tweet</button>
+
+            <a href="#" class="profile__link">
+                <div class="profile">
+
+                    <div class="profile__avatar"><img src="https://via.placeholder.com/40" alt=""></div>
+
+                    <div class="profile__names">
+                        <div class="profile__names__username username">username</div>
+                        <div class="profile__names__user user">@user</div>
+                    </div>
+
+                    <div class="profile__dots">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+        <!--.nav-->
+
+
+        <!--+ Feed -->
+
+        <div class="feed">
+
+            <div class="feed__header">
+                <div class="feed__header__main">Главная</div>
+                <i class="far fa-star"></i>
+            </div>
+
+
+            <div class="sending-tweet">
+
+                <div class="sending-tweet__avatar profile-pic"><img src="https://via.placeholder.com/48" alt=""></div>
+
+                <div class="sending-tweet__block">
+
+                    <div class="sending-tweet__input">
+                        <input type="text" name="" id="" placeholder="What's up?">
+                        <!-- <label for="text">ddddd</label> -->
+                        <!-- <textarea name="" id="" cols="30" rows="2" placeholder="avea">srgew</textarea> -->
+                    </div>
+
+                    <div class="sending-tweet__buttons">
+                        <div class="sending-tweet__attach">
+
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+
+                        </div>
+
+                        <button class="sending-tweet__tweet" disabled>
+                            Tweet
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Tweet -->
+
+            <div class="tweet">
+
+                <div class="tweet__avatar profile-pic">
+                    <img src="https://via.placeholder.com/48" alt="">
+                </div>
+
+                <div class="tweet__content">
+
+                    <div class="tweet__info">
+                        <div class="tweet__info-right">
+                            <a class="tweet__username username">Bodega Cats</a>
+                            <div class="tweet__user user">@Bodegacats_</div>
+                            <span class="tweet__dot user">·</span>
+                            <div class="tweet__time user">2 h</div>
+                        </div>
+
+                        <div class="tweet__more user">···</div>
+                    </div>
+
+                    <div class="tweet__text">
+                        Чтобы снизить риск развития болезни Альцгеймера, нужна когнитивная тренировка. Помимо различных
+                        хобби и головоломок советуют не зацикливаться на повторном просмотре фильмов, использовании
+                        одних и
+                        тех же маршрутов, на прослушивании одних и тех же песен.
+                    </div>
+
+                    <div class="tweet__image">
+                        <img src="https://pbs.twimg.com/media/FJ4Zx9LXMAEl1Gb?format=jpg&name=large" alt="">
+                    </div>
+
+                    <div class="tweet__interaction">
+                        <div class="feedback">
+                            <i class="far fa-comment"></i>
+                            <span class="small-font">27</span>
+                        </div>
+
+                        <div class="feedback">
+                            <i class="fas fa-retweet"></i>
+                            <span class="small-font">1,1 тыс.</span>
+                        </div>
+
+                        <div class="feedback">
+                            <i class="far fa-heart"></i>
+                            <span class="small-font">16,4 тыс.</span>
+                        </div>
+
+                        <div class="feedback">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="tweet">
+
+                <div class="tweet__avatar profile-pic">
+                    <img src="https://via.placeholder.com/48" alt="">
+                </div>
+
+                <div class="tweet__content">
+
+                    <div class="tweet__info">
+                        <div class="tweet__info-right">
+                            <a class="tweet__username username">Gay Cats</a>
+                            <div class="tweet__user user">@gayocats</div>
+                            <span class="tweet__dot user">·</span>
+                            <div class="tweet__time user">47 min</div>
+                        </div>
+
+                        <div class="tweet__more user">···</div>
+                    </div>
+
+                    <div class="tweet__text">
+                        <p>
+                            Простите я обязана этим поделиться. Я только что узнала что у Крутого пике есть последняя
+                            серия
+                        </p> <br>
+                        <p>Они там СЕЛИ</p>
+
+                    </div>
+
+                    <div class="tweet__interaction">
+                        <div class="feedback">
+                            <i class="far fa-comment"></i>
+                        </div>
+
+                        <div class="feedback">
+                            <i class="fas fa-retweet"></i>
+                            <span class="small-font">62</span>
+                        </div>
+
+                        <div class="feedback">
+                            <i class="far fa-heart"></i>
+                            <span class="small-font">387</span>
+                        </div>
+
+                        <div class="feedback">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tweet">
+
+                <div class="tweet__avatar profile-pic">
+                    <img src="https://via.placeholder.com/48" alt="">
+                </div>
+
+                <div class="tweet__content">
+
+                    <div class="tweet__info">
+                        <div class="tweet__info-right">
+                            <a class="tweet__username username">Gay Cats</a>
+                            <div class="tweet__user user">@gayocats</div>
+                            <span class="tweet__dot user">·</span>
+                            <div class="tweet__time user">47 min</div>
+                        </div>
+
+                        <div class="tweet__more user">···</div>
+                    </div>
+
+                    <div class="tweet__image">
+                        <img src="https://pbs.twimg.com/media/FJ7u9nyVUAgIaET?format=jpg&name=large" alt="">
+                    </div>
+
+                    <div class="tweet__interaction">
+                        <div class="feedback">
+                            <i class="far fa-comment"></i>
+                        </div>
+
+                        <div class="feedback">
+                            <i class="fas fa-retweet"></i>
+                            <span class="small-font">62</span>
+                        </div>
+
+                        <div class="feedback">
+                            <i class="far fa-heart"></i>
+                            <span class="small-font">387</span>
+                        </div>
+
+                        <div class="feedback">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--+ Sidebar column -->
+
+        <div class="sidebar">
+
+
+            <div class="search">
+                <div class="search__block">
+                    <form action="#" role="search">
+                        <div class="search__field">
+                            <div class="search__button">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="search__input">
+                                <input type="text" placeholder="Search in Twitter">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="trends">
+                <div class="trends__block">
+
+                    <div class="trends__header">
+                        <div class="trends__title">Trends for you</div>
+                        <button class="trends__settings" title="settings">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+
+                    <div class="trends__item">
+                        <div class="trends__tags">
+                            <div class="trends__trending">Trending in Russia</div>
+                            <div class="trends__word">Чжун ли</div>
+                            <div class="trends__tweets">1,887 Tweets</div>
+                        </div>
+                        <div class="trends__dots" data-title="More">···</div>
+                    </div>
+
+                    <div class="trends__item">
+                        <div class="trends__tags">
+                            <div class="trends__trending">Entertainment · Trending</div>
+                            <div class="trends__word">#AttackonTitanFinalSeason</div>
+                            <div class="trends__tweets">17.4K Tweets</div>
+                        </div>
+                        <div class="trends__dots" data-title="More">···</div>
+                    </div>
+
+                    <div class="trends__item">
+                        <div class="trends__tags">
+                            <div class="trends__trending">Trending in Russia</div>
+                            <div class="trends__word">Ли Юэ</div>
+                        </div>
+                        <div class="trends__dots" data-title="More">···</div>
+                    </div>
+
+                    <div class="trends__item">
+                        <div class="trends__tags">
+                            <div class="trends__trending">Trending in Russia</div>
+                            <div class="trends__word">#нюдсочетверг</div>
+                            <div class="trends__tweets">4,342 Tweets</div>
+                        </div>
+                        <div class="trends__dots" data-title="More">···</div>
+                    </div>
+
+                    <div class="trends__item">
+                        <div class="trends__tags">
+                            <div class="trends__trending">Trending in Russia</div>
+                            <div class="trends__word">лгбт</div>
+                        </div>
+                        <div class="trends__dots" data-title="More">···</div>
+                    </div>
+
+                    <div class="trends__more">Show more</div>
+
+                </div>
+            </div> <!-- Trends -->
+
+
+            <!-- Who to follow -->
+
+            <div class="wtf trends">
+                <div class="wth__block trends__block">
+
+                    <div class="wtf__header trends__header">
+                        <div class="trends__title">Who to follow</div>
+                    </div>
+
+                    <div class="wtf__profiles">
+
+                        <div class="wtf__profile trends__item">
+                            <div class="wtf__info">
+                                <div class="wtf__avatar profile-pic">
+                                    <img src="https://via.placeholder.com/48" alt="">
+                                </div>
+
+                                <a href="#" class="wtf__profile__link">
+                                    <div class="wtf__profile__names">
+                                        <div class="username">username</div>
+                                        <div class="user">@user</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="wtf__follow">
+                                <button class="wtf__button">Follow</button>
+                            </div>
+                        </div>
+
+                        <div class="wtf__profile trends__item">
+                            <div class="wtf__info">
+                                <div class="wtf__avatar profile-pic">
+                                    <img src="https://via.placeholder.com/48" alt="">
+                                </div>
+
+                                <a href="#" class="wtf__profile__link">
+                                    <div class="wtf__profile__names">
+                                        <div class="username">username</div>
+                                        <div class="user">@user</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="wtf__follow">
+                                <button class="wtf__button">Follow</button>
+                            </div>
+                        </div>
+
+                        <div class="wtf__profile trends__item">
+                            <div class="wtf__info">
+                                <div class="wtf__avatar profile-pic">
+                                    <img src="https://via.placeholder.com/48" alt="">
+                                </div>
+
+                                <a href="#" class="wtf__profile__link">
+                                    <div class="wtf__profile__names">
+                                        <div class="username">username</div>
+                                        <div class="user">@user</div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="wtf__follow">
+                                <button class="wtf__button">Follow</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="wtf__more trends__more">Show more</div>
+
+                </div>
+            </div>
+
+
+        </div> <!-- Sidebar -->
+
+    </div>
+
+
+</body>
+
+</html>
