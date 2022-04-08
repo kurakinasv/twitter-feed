@@ -38,35 +38,38 @@ body {
     --search-col: #253341;
     --input-col: rgb(136, 153, 166);
     --sidebar-block: #192734;
+    --nav-hover: #2f3a44;
 }
-
 
 
 /*+ Navigation */
 
 .nav {
-    /* width: 275px; */
-    height: 100%;
-    /* display: inline-block; */
-    /* justify-content: space-between; */
     margin: 0 10px;
-    /* box-sizing: border-box; */
-    position: fixed;
-    /* background-color: #1d9bf0; */
-    position: relative;
 }
 
 .logo {
     padding: 10px;
     font-size: 30px;
+    cursor: pointer;
+}
+
+.nav__upper {
+    position: fixed;
 }
 
 .menu__item {
     display: block;
     padding: 15px 0;
+    border-radius: 50px;
 
     color: #fff;
     text-decoration: none;
+}
+
+.menu__item:hover {
+    background-color: var(--nav-hover);
+    transition: all 0.1s ease-in;
 }
 
 .menu__item__text {
@@ -80,9 +83,8 @@ body {
 }
 
 .menu__item:hover .nav__menu__item__block {
-    background-color: #2f3a44;
+    background-color: var(--nav-hover);
     border-radius: 35px;
-
 }
 
 .nav__tweet {
@@ -97,7 +99,7 @@ body {
 
     border: none;
     border-radius: 60px;
-    background-color: #1d9bf0;
+    background-color: var(--light-blue);
 
     transition: all 0.1s ease-in;
 
@@ -110,40 +112,30 @@ body {
 }
 
 .profile {
+    position: fixed;
+    bottom: 20px;
+}
+
+.profile__content {
     width: 250px;
-    /* height: 40px; */
     padding: 12px;
     border-radius: 100px;
-    box-sizing: border-box;
 
     display: flex;
-    /* justify-content: space-between; */
-
-    position: absolute;
-    bottom: 20px;
-
     align-items: center;
-    transition: all 0.1s ease-in;
 
+    transition: all 0.1s ease-in;
 }
 
 .profile__link {
-    display: block;
-    /* width: 500px; */
+    display: inline-block;
     text-decoration: none;
     color: #fff;
 }
 
-.profile__link:hover .profile {
-    /* border-radius: 40px; */
-    background-color: #2f3a44;
+.profile__link:hover .profile__content {
+    background-color: var(--nav-hover);
     transition: all 0.1s ease-in;
-
-}
-
-.profile__avatar {
-    /* align-items: center; */
-    /* position: absolute; */
 }
 
 .profile__avatar img {
@@ -173,31 +165,38 @@ body {
 
 .profile__dots {
     width: 27%;
-    /* position: absolute; */
-    /* padding-right: 15px; */
-    /* right: 0; */
     font-size: 12px;
     text-align: right;
 }
-
-/* .nav__profile::after {
-    content: "...";
-} */
-
 
 
 /* + Feed */
 
 .feed {
-    /* padding: 0 20px; */
-    border: 1px solid #253341;
+    border: 1px solid var(--search-col);
 }
 
 .feed__header {
     display: flex;
     justify-content: space-between;
     padding: 15px 20px;
+    position: sticky;
+    top: 0;
+}
 
+.feed__header::before {
+    content: "";
+    position: absolute;
+    width: 607px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-blue);
+    z-index: -1;
+}
+
+.feed__header i {
+    cursor: pointer;
 }
 
 .feed__header__main {
@@ -210,11 +209,10 @@ body {
 
 .sending-tweet {
     display: flex;
-    height: 100px;
+    max-height: 124px;
     padding: 20px;
-    /* justify-content: space-between; */
-    /* align-items: top; */
-    border-bottom: 1px solid #2f3a44;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--nav-hover);
 }
 
 .sending-tweet__avatar {
@@ -231,14 +229,9 @@ body {
     width: 100%;
 }
 
-.sending-tweet__input {}
-
 .sending-tweet__input input {
-    width: 100%;
-    height: 50%;
-
-
     padding: 12px 0;
+    margin-bottom: 12px;
 
     font-size: 20px;
     color: #fff;
@@ -250,9 +243,7 @@ body {
 
 .sending-tweet__buttons {
     display: flex;
-    height: 50%;
     align-items: end;
-
     justify-content: space-between;
 }
 
@@ -264,13 +255,12 @@ body {
 
     font-size: 17px;
     color: #1d9bf0;
+    cursor: pointer;
 }
 
 .sending-tweet__tweet {
     width: 100px;
     height: 36px;
-
-    /* margin: 20px 0; */
 
     font-size: 15px;
     font-weight: 700;
@@ -278,7 +268,7 @@ body {
 
     border: none;
     border-radius: 60px;
-    background-color: #1d9bf0;
+    background-color: var(--light-blue);
 
     transition: all 0.1s ease-in;
 
@@ -305,19 +295,28 @@ body {
 
     display: flex;
     border-bottom: 1px solid var(--border-col);
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tweet:hover {
+    background-color: var(--sidebar-block);
+    transition: 0.3s;
 }
 
 .tweet__avatar {
     margin-right: 12px;
 }
 
-.tweet__content {
-    /* padding-bottom: 12px; */
-}
-
 .tweet__info {
     display: flex;
     justify-content: space-between;
+}
+
+.tweet__username:hover,
+.tweet__time:hover {
+    text-decoration: underline;
 }
 
 .tweet__info-right {
@@ -334,7 +333,13 @@ body {
 }
 
 .tweet__more {
+    width: 35px;
+    height: 35px;
+
     font-size: 25px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
 }
 
 .tweet__text {
@@ -351,8 +356,6 @@ body {
 
     border-radius: 20px;
 }
-
-.tweet__nickname {}
 
 .tweet__text {
     font-size: 15px;
@@ -379,6 +382,7 @@ body {
     display: flex;
     align-items: center;
     line-height: 20px;
+    cursor: pointer;
 }
 
 .feedback span {
@@ -393,8 +397,6 @@ body {
     height: 100vh;
     margin-left: 30px;
     margin-right: 10px;
-    /* position: fixed; */
-    /* background-color: #253341; */
 }
 
 
@@ -404,6 +406,19 @@ body {
 .search {
     width: 100%;
     margin-top: 10px;
+    position: sticky;
+    top: 10px;
+}
+
+.search::before {
+    content: "";
+    background-color: var(--dark-blue);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: inherit;
+    height: 55px;
+    z-index: -1;
 }
 
 .search__block {
@@ -484,7 +499,6 @@ input[type="text"]::-moz-placeholder {
 
 .trends__title {
     font-weight: 700;
-    /* line-height: 1; */
     line-height: 24px;
     font-size: 20px;
 }
@@ -496,9 +510,6 @@ input[type="text"]::-moz-placeholder {
     position: relative;
     margin: -4px 0;
 
-
-    /* line-height: 40px; */
-
     border-radius: 50%;
     background-color: transparent;
     z-index: 1;
@@ -509,17 +520,11 @@ input[type="text"]::-moz-placeholder {
 .trends__settings::after {
     content: "";
     display: inline-block;
-    /* width: 40px; */
-    /* height: 40px; */
 
     position: absolute;
-    /* margin: -12px 0; */
-    /* top: -2px; */
-    /* left: -11px; */
     z-index: -1;
 
     background-color: var(--search-col);
-    /* border-radius: 50%; */
 }
 
 .trends__settings:hover {
@@ -588,13 +593,15 @@ input[type="text"]::-moz-placeholder {
     transition: 0.5s;
 }
 
-.trends__dots:hover {
+.trends__dots:hover,
+.tweet__more:hover {
     background-color: rgba(29, 155, 240, 0.1);
     color: var(--light-blue);
     transition: 0.5s;
 }
 
-.trends__dots::after {
+.trends__dots::after,
+.tweet__more::after {
     content: "";
     opacity: 0;
 }
@@ -648,12 +655,6 @@ input[type="text"]::-moz-placeholder {
     align-items: center;
 }
 
-.wtf__avatar {
-    /* display: inline-block; */
-    /* max-height: 48px; */
-    /* border-radius: 50%; */
-}
-
 .wtf__avatar img {
     display: block;
 }
@@ -664,11 +665,7 @@ input[type="text"]::-moz-placeholder {
 }
 
 .wtf__profile__link:hover .username {
-    /* background-color: #2f3a44; */
-    /* transition: all 0.1s ease-in; */
-
     text-decoration: underline solid;
-
 }
 
 .wtf__profile__names {
@@ -691,4 +688,5 @@ input[type="text"]::-moz-placeholder {
     font-weight: 700;
     line-height: 16px;
     background-color: transparent;
+    cursor: pointer;
 }
